@@ -124,7 +124,7 @@ bidnn = BiDNN(conf)
 bidnn.train()
 out = bidnn.predict()
 ```
-Fore more details, you can take a look at the *__main__* section of *bidnn.py*.
+Fore more details, you can take a look at the *\__main\__* section of *bidnn.py*.
 
 Requirements
 ============
