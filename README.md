@@ -2,7 +2,7 @@ BiDNN
 =====
 Bidirectional (Symmetrical) Deep Neural Networks
 
-As described in: V. Vukotić, C. Raymond, and G. Gravier. Bidirectional Joint Representation Learning with Symmetrical Deep Neural Networks for Multimodal and Crossmodal Applications. In *Proceedings of the 2016 ACM International Conference on Multimedia Retrieval (ICMR)*, pages 343–346. ACM, 2016. 
+As described in: V. Vukotić, C. Raymond, and G. Gravier. Bidirectional Joint Representation Learning with Symmetrical Deep Neural Networks for Multimodal and Crossmodal Applications. In *Proceedings of the 2016 ACM International Conference on Multimedia Retrieval (ICMR)*, pages 343–346. ACM, 2016. (Available [here](https://hal.inria.fr/hal-01314302/document))
 
 BiDNNs are similar to (or a variation of) multimodal autoencoders. They offer crossmodal translation and superior multimodal embedding created in a common representation created by the two crossmodal translation. The following picture illustrates the architectural differences of classical multimodal autoencoders and BiDNNs:
 
@@ -111,15 +111,41 @@ The first number is a label (since this is unsupervised learning, it's ignored b
 As a Python module
 -------------------
 ```python
-print "Hi"
+from biddn import BiDNN, Config
+
+conf = Config()
+conf.mod1size = 100
+conf.mod2size = 4096
+conf.hdn = 2048
+conf.rep = 2048
+
+bidnn = BiDNN(conf)
+
+bidnn.train()
+out = bidnn.predict()
 ```
+Fore more details, you can take a look at the *__main__* section of *bidnn.py*.
 
 Requirements
 ============
 
-bla bla bla
+* Theano
+* Lasagne (tested under version 0.2.dev1)
+* NumPy
+* SciPy (solely for L2 normalization)
+* scikit-learn (solely to load and write LibSVM formatted files - not needed if used as a python module)
 
 Citing
 ======
 
-bla bla
+If you used and/or liked this tool, please consider citing the paper where the methodology is described:
+```
+@InProceedings{vukotic-icmr-16,
+  title={Bidirectional Joint Representation Learning with Symmetrical Deep Neural Networks for Multimodal and Crossmodal Applications},
+  author={Vukoti{\'c}, Vedran and Raymond, Christian and Gravier, Guillaume},
+  booktitle={Proceedings of the 2016 ACM International Conference on Multimedia Retrieval},
+  pages={343--346},
+  year={2016},
+  organization={ACM}
+}
+```
