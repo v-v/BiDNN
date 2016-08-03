@@ -62,7 +62,7 @@ optional arguments:
                         epochs to train (0 to skip training and solely
                         predict)
   -d DROPOUT, --dropout DROPOUT
-                        dropout value (default: 0.2; 0 -> no dropout
+                        dropout value (default: 0.2; 0 -> no dropout)
   -b BATCH_SIZE, --batch-size BATCH_SIZE
                         batch size (default: 128)
   -r LEARNING_RATE, --learning-rate LEARNING_RATE
