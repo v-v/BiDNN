@@ -51,7 +51,7 @@ positional arguments:
   mod1size              dimensionality of 1st modality
   mod2size              dimensionality of 2nd modality
   hdnsize               dimensionality of 1st hidden layer
-  repsize               output (multimodal) represnentation dimensionality (2
+  repsize               output (multimodal) representation dimensionality (2
                         * 2nd hdn layer dim)
 
 optional arguments:

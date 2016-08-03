@@ -354,7 +354,7 @@ if __name__ == "__main__":
     ap.add_argument("mod1size", type=int, help="dimensionality of 1st modality")
     ap.add_argument("mod2size", type=int, help="dimensionality of 2nd modality") 
     ap.add_argument("hdnsize", type=int, help="dimensionality of 1st hidden layer")
-    ap.add_argument("repsize", type=int, help="output (multimodal) represnentation dimensionality (2 * 2nd hdn layer dim)")
+    ap.add_argument("repsize", type=int, help="output (multimodal) representation dimensionality (2 * 2nd hdn layer dim)")
 
     # additional arguments
     ap.add_argument("-a", "--activation", help="activation function (default: tanh)")
