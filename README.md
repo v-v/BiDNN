@@ -29,6 +29,97 @@ Given such an architecture, crossmodal translation is done straightforwardly by 
 
 Usage
 =====
+This code can either be used as a stand-alone tool or as a python module within other code.
 
+As a stand-alone tool
+---------------------
 
+The following command line parameters are available:
+```
+$ ./bidnn.py --help
 
+usage: bidnn.py [-h] [-a ACTIVATION] [-e EPOCHS] [-d DROPOUT] [-b BATCH_SIZE]
+                [-r LEARNING_RATE] [-m MOMENTUM] [-l LOAD_MODEL]
+                [-s SAVE_MODEL] [-c] [-n] [-z] [-u] [-w WRITE_AFTER]
+                [-x EXEC_COMMAND] [-v VERBOSITY]
+                infile outfile mod1size mod2size hdnsize repsize
+
+positional arguments:
+  infile                input file containing data in libsvm format
+  outfile               output file where the multimodal representation is
+                        saved in libsvm format
+  mod1size              dimensionality of 1st modality
+  mod2size              dimensionality of 2nd modality
+  hdnsize               dimensionality of 1st hidden layer
+  repsize               output (multimodal) represnentation dimensionality (2
+                        * 2nd hdn layer dim)
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -a ACTIVATION, --activation ACTIVATION
+                        activation function (default: tanh)
+  -e EPOCHS, --epochs EPOCHS
+                        epochs to train (0 to skip training and solely
+                        predict)
+  -d DROPOUT, --dropout DROPOUT
+                        dropout value (default: 0.2; 0 -> no dropout
+  -b BATCH_SIZE, --batch-size BATCH_SIZE
+                        batch size (default: 128)
+  -r LEARNING_RATE, --learning-rate LEARNING_RATE
+                        learning rate (default: 0.1)
+  -m MOMENTUM, --momentum MOMENTUM
+                        momentum (default: 0.9)
+  -l LOAD_MODEL, --load-model LOAD_MODEL
+                        load pretrained model from file
+  -s SAVE_MODEL, --save-model SAVE_MODEL
+                        save trained model to file (at the end or after
+                        WRITE_AFTER epochs); any %e will be replaced with the
+                        current epoch
+  -c, --crossmodal      perform crossmodal expansion (fill in missing
+                        modalities) instead of multimodal embedding
+  -n, --l2-norm         L2 normalize output (representation or reconstruction)
+  -z, --ignore-zeroes   do not treat zero vectors as missing modalities
+  -u, --untied          do not tie the variables in the central part
+  -w WRITE_AFTER, --write-after WRITE_AFTER
+                        write prediction file after x epochs (not only in the
+                        end); use %e in [outfile] to indicate epoch number
+  -x EXEC_COMMAND, --exec-command EXEC_COMMAND
+                        execute command after WRITE_AFTER epochs (-w) or after
+                        training; any %e in the command will be replaced with
+                        the current epoch
+  -v VERBOSITY, --verbosity VERBOSITY
+                        sets verbosity (0-3, default: 3)
+```
+
+For example, to obtain a multimodal embedding of two modalities (e.g. text with dimensionality 100 and CNN visual features or dimensionality 4096) stored in a *dataset.txt*, the command could be:
+```
+./bidnn.py -n -e 10000 dataset.txt output.txt 100 4096 2048 2048
+```
+This would train a BiDNN with the first hidden layer with 2048 nodes and a representation size of 2048 (the 2nd and central hidden layer would be of size 2014 for each crossmodal translation.
+
+To do the same but store the model, generate a prediction and run an external evaluation tool every 100 epochs, the command would be the following:
+```
+./bidnn.py dataset.txt output.txt 100 4096 2048 2048 -n -e 10000 -w 100 -s model_%e.npz -x "./evaulate.py"
+```
+####Input format
+Input and output files are stored in LibSVM format:
+```
+0 1:val1 2:val2 3:val3, ... n:valn
+```
+The first number is a label (since this is unsupervised learning, it's ignored but it's still preserved in case the user is doing unsupervised learning in label data and needs the labeled preserved. Following are i:val pairs indicating each nonzero float value of the vectors representing each modality. If the two modalities are e.g. of dimensionality 100 and 300, each line would consist of 400 entries, first of the first modality, followed by the second modality (as defined in the mod1size and mod2size command line arguments)
+
+As a Python module
+-------------------
+```python
+print "Hi"
+```
+
+Requirements
+============
+
+bla bla bla
+
+Citing
+======
+
+bla bla
