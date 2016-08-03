@@ -95,7 +95,7 @@ For example, to obtain a multimodal embedding of two modalities (e.g. text with 
 ```
 ./bidnn.py -n -e 10000 dataset.txt output.txt 100 4096 2048 2048
 ```
-This would train a BiDNN with the first hidden layer with 2048 nodes and a representation size of 2048 (the 2nd and central hidden layer would be of size 2014 for each crossmodal translation.
+This would train a BiDNN with the first hidden layer with 2048 nodes and a representation size of 2048 (the 2nd and central hidden layer would be of size 2014 for each crossmodal translation).
 
 To do the same but store the model, generate a prediction and run an external evaluation tool every 100 epochs, the command would be the following:
 ```
