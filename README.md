@@ -106,7 +106,7 @@ Input and output files are stored in LibSVM format:
 ```
 0 1:val1 2:val2 3:val3, ... n:valn
 ```
-The first number is a label (since this is unsupervised learning, it's ignored but it's still preserved in case the user is doing unsupervised learning in label data and needs the labeled preserved. Following are i:val pairs indicating each nonzero float value of the vectors representing each modality. If the two modalities are e.g. of dimensionality 100 and 300, each line would consist of 400 entries, first of the first modality, followed by the second modality (as defined in the mod1size and mod2size command line arguments).
+The first number is a label (since this is unsupervised learning, it's ignored but it's still preserved in case the user is doing unsupervised learning with label data and needs the labeled preserved). Following are i:val pairs indicating each nonzero float value of the vectors representing each modality. If the two modalities are e.g. of dimensionality 100 and 300, each line would consist of 400 entries, first of the first modality, followed by the second modality (as defined in the mod1size and mod2size command line arguments).
 
 As a Python module
 -------------------
