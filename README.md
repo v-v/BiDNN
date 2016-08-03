@@ -119,7 +119,10 @@ conf.mod2size = 4096
 conf.hdn = 2048
 conf.rep = 2048
 
+X = ... # load or generate data
+
 bidnn = BiDNN(conf)
+bidnn.load_dataset(X)
 
 bidnn.train()
 out = bidnn.predict()
