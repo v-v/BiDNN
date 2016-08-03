@@ -99,7 +99,7 @@ This would train a BiDNN with the first hidden layer with 2048 nodes and a repre
 
 To do the same but store the model, generate a prediction and run an external evaluation tool every 100 epochs, the command would be the following:
 ```
-./bidnn.py dataset.txt output.txt 100 4096 2048 2048 -n -e 10000 -w 100 -s model_%e.npz -x "./evaulate.py"
+./bidnn.py dataset.txt output_%e.txt 100 4096 2048 2048 -n -e 10000 -w 100 -s model_%e.npz -x "./evaulate.py output_%e.txt"
 ```
 ####Input format
 Input and output files are stored in LibSVM format:
