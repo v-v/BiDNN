@@ -1,9 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# Desc:
+# Desc: Bidirectional (Symmetrical) Deep Neural Networks
 #
-# Usage:
+#       Crossmodal translation and multimodal embedding with deep neural networks
+#
+#       As described in: V. Vukotić, C. Raymond, and G. Gravier. Bidirectional Joint Representation Learning with Symmetrical Deep Neural Networks
+#       for Multimodal and Crossmodal Applications. In Proceedings of the 2016 ACM International Conference on Multimedia Retrieval (ICMR), pages 
+#       343–346. ACM, 2016. (Available here: https://hal.inria.fr/hal-01314302/document)
+#
+# Usage: ./bidnn.py --help
 #
 
 import time
