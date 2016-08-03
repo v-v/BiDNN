@@ -143,7 +143,7 @@ If you used and/or liked this tool, please consider citing the paper where the m
 @InProceedings{vukotic-icmr-16,
   title={Bidirectional Joint Representation Learning with Symmetrical Deep Neural Networks for Multimodal and Crossmodal Applications},
   author={Vukoti{\'c}, Vedran and Raymond, Christian and Gravier, Guillaume},
-  booktitle={Proceedings of the 2016 ACM International Conference on Multimedia Retrieval},
+  booktitle={Proceedings of the 2016 ACM International Conference on Multimedia Retrieval (ICMR)},
   pages={343--346},
   year={2016},
   organization={ACM}
