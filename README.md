@@ -2,7 +2,7 @@ BiDNN
 =====
 Bidirectional (Symmetrical) Deep Neural Networks
 
-As described in: V. Vukotić, C. Raymond, and G. Gravier. Bidirectional Joint Representation Learning with Symmetrical Deep Neural Networks for Multimodal and Crossmodal Applications. In *Proceedings of the 2016 ACM on International Conference on Multimedia Retrieval (ICMR)*, pages 343–346. ACM, 2016. 
+As described in: V. Vukotić, C. Raymond, and G. Gravier. Bidirectional Joint Representation Learning with Symmetrical Deep Neural Networks for Multimodal and Crossmodal Applications. In *Proceedings of the 2016 ACM International Conference on Multimedia Retrieval (ICMR)*, pages 343–346. ACM, 2016. 
 
 BiDNNs are similar to (or a variation of) multimodal autoencoders. They offer crossmodal translation and superior multimodal embedding created in a common representation created by the two crossmodal translation. The following picture illustrates the architectural differences of classical multimodal autoencoders and BiDNNs:
 
