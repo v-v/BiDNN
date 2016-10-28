@@ -2,7 +2,10 @@ BiDNN
 =====
 Bidirectional (Symmetrical) Deep Neural Networks
 
-As described in: V. Vukotić, C. Raymond, and G. Gravier. Bidirectional Joint Representation Learning with Symmetrical Deep Neural Networks for Multimodal and Crossmodal Applications. In *Proceedings of the 2016 ACM International Conference on Multimedia Retrieval (ICMR)*, pages 343–346. ACM, 2016. (Available [here](https://hal.inria.fr/hal-01314302/document))
+As originally described in: V. Vukotić, C. Raymond, and G. Gravier. **Bidirectional Joint Representation Learning with Symmetrical Deep Neural Networks for Multimodal and Crossmodal Applications**. In *Proceedings of the 2016 ACM International Conference on Multimedia Retrieval (ICMR)*, pages 343–346. ACM, New York, 2016. (Available [here](https://hal.inria.fr/hal-01314302/document))
+
+and evaluated in more details in: V. Vukotić, C. Raymond, and G. Gravier.  **Multimodal and Crossmodal Representation Learning from Textual and Visual Features with Bidirectional Deep Neural Networks for Video Hyperlinking**. In *ACM Multimedia 2016 Workshop: Vision and Language Integration Meets Multimedia Fusion (iV&L-MM'16)*, ACM, Amsterdam, 2016. (Available [here](https://hal.inria.fr/hal-01374727/document))
+
 
 BiDNNs are similar to (or a variation of) multimodal autoencoders. They offer crossmodal translation and superior multimodal embedding created in a common representation created by the two crossmodal translation. The following picture illustrates the architectural differences of classical multimodal autoencoders and BiDNNs:
 
@@ -141,7 +144,7 @@ Requirements
 Citing
 ======
 
-If you used and/or liked this tool, please consider citing the paper where the methodology is described:
+If you used and/or liked this tool, please consider citing the original paper where the methodology is described:
 ```
 @InProceedings{vukotic-icmr-16,
   title={Bidirectional Joint Representation Learning with Symmetrical Deep Neural Networks for Multimodal and Crossmodal Applications},
@@ -150,5 +153,17 @@ If you used and/or liked this tool, please consider citing the paper where the m
   pages={343--346},
   year={2016},
   organization={ACM}
+}
+```
+and/or a paper with additional evaluation and analysis in video hyperlinking:
+```
+@inproceedings{vukotic-ivlmm-16,
+  title = {{Multimodal and Crossmodal Representation Learning from Textual and Visual Features with Bidirectional Deep Neural Networks for Video Hyperlinking}},
+  author = {Vukotic, Vedran and Raymond, Christian and Gravier, Guillaume},
+  booktitle = {{ACM Multimedia 2016 Workshop: Vision and Language Integration Meets Multimedia Fusion (iV\&L-MM'16)}},
+  address = {Amsterdam, Netherlands},
+  organization = {{ACM}},
+  year = {2016},
+  month = Oct
 }
 ```
