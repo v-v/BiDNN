@@ -360,7 +360,7 @@ if __name__ == "__main__":
     ap.add_argument("-a", "--activation", help="activation function (default: tanh)")
     ap.add_argument("-e", "--epochs", type=int, help="epochs to train (0 to skip training and solely predict)")
     ap.add_argument("-d", "--dropout", type=float, help="dropout value (default: 0.2; 0 -> no dropout)")
-    ap.add_argument("-b", "--batch-size", help="batch size (default: 128)")
+    ap.add_argument("-b", "--batch-size", type=int, help="batch size (default: 128)")
     ap.add_argument("-r", "--learning-rate", type=float, help="learning rate (default: 0.1)")
     ap.add_argument("-m", "--momentum", type=float, help="momentum (default: 0.9)")
     ap.add_argument("-l", "--load-model", help="load pretrained model from file")
@@ -396,7 +396,7 @@ if __name__ == "__main__":
         conf.dropout = args.dropout
 
     if args.batch_size:
-        conf.batch_size = int(args.batch_size)
+        conf.batch_size = args.batch_size
 
     if args.learning_rate:
         conf.lr = args.learning_rate
