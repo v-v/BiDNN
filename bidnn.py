@@ -396,7 +396,7 @@ if __name__ == "__main__":
         conf.dropout = args.dropout
 
     if args.batch_size:
-        conf.batch_size = args.batch_size
+        conf.batch_size = int(args.batch_size)
 
     if args.learning_rate:
         conf.lr = args.learning_rate
