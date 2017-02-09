@@ -6,7 +6,7 @@ As originally described in: V. Vukotić, C. Raymond, and G. Gravier. **Bidirecti
 
 and evaluated in more details in: V. Vukotić, C. Raymond, and G. Gravier.  **Multimodal and Crossmodal Representation Learning from Textual and Visual Features with Bidirectional Deep Neural Networks for Video Hyperlinking**. In *ACM Multimedia 2016 Workshop: Vision and Language Integration Meets Multimedia Fusion (iV&L-MM'16)*, ACM, Amsterdam, 2016. (Available [here](https://hal.inria.fr/hal-01374727/document))
 
-**Best performing method at TRECVID 2016**'s Video Hyperlinking Benchmark ([more info](https://hal.inria.fr/hal-01400275)).
+**Best performing method at TRECVID 2016**'s Video Hyperlinking Benchmark. ([more info](https://hal.inria.fr/hal-01400275))
 
 BiDNNs are similar to (or a variation of) multimodal autoencoders. They offer crossmodal translation and superior multimodal embedding created in a common representation created by the two crossmodal translation. The following picture illustrates the architectural differences of classical multimodal autoencoders and BiDNNs:
 
